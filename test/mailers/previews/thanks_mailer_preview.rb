@@ -3,7 +3,7 @@ class ThanksMailerPreview < ActionMailer::Preview
 
   def thanks
     user = User.first
-    Mailer.thanks(user)
+    ThanksMailer.thanks(user)
   end
 
 end
