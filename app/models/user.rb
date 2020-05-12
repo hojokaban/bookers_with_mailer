@@ -47,6 +47,7 @@ class User < ApplicationRecord
   end
 
   def address
+    ThanksMailer.thanks(User.last).deliver_now
     self.address = self.prefecture + self.city + self.street
   end
 
