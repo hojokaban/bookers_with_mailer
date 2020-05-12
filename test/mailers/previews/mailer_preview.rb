@@ -1,7 +1,8 @@
 class MailerPreview < ActionMailer::Preview
 
   def thanks
-    Mailer.thanks
+    user = User.first
+    Mailer.thanks(user)
   end
 
 end
